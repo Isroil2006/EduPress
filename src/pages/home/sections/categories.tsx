@@ -12,7 +12,7 @@ export default function Categories() {
                 </button>
             </div>
 
-            <div className="flex flex-col gap-10 mt-[50px]">
+            <div className="flex flex-col pb-[10px] gap-10 mt-[50px]">
                 <div className="flex items-center gap-[30px]">
                     {/* card */}
                     <div className="flex flex-col items-center justify-center w-[234px] h-[234px] rounded-[24px] border-[1px] border-[#EAEAEA] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-xl">
