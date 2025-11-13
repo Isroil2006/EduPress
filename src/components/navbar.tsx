@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
     return (
-        <div className="myContainer h-[72px] flex items-center justify-between">
+        <div className="myContainer h-max flex items-center justify-between">
             <div className="">
                 <a href="" className="flex items-center gap-[4px]">
                     <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@ export default function Navbar() {
                     to="/courses"
                     className={({ isActive }) =>
                         `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5]" : "hover:text-[#FF782D]"
+                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
                         }`
                     }
                 >
@@ -62,7 +62,7 @@ export default function Navbar() {
                     to="/blog"
                     className={({ isActive }) =>
                         `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5]" : "hover:text-[#FF782D]"
+                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
                         }`
                     }
                 >
@@ -73,7 +73,7 @@ export default function Navbar() {
                     to="/page"
                     className={({ isActive }) =>
                         `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5]" : "hover:text-[#FF782D]"
+                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
                         }`
                     }
                 >
@@ -84,7 +84,7 @@ export default function Navbar() {
                     to="/learnpress"
                     className={({ isActive }) =>
                         `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5]" : "hover:text-[#FF782D]"
+                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
                         }`
                     }
                 >
@@ -95,7 +95,7 @@ export default function Navbar() {
                     to="/premium-theme"
                     className={({ isActive }) =>
                         `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5]" : "hover:text-[#FF782D]"
+                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
                         }`
                     }
                 >
