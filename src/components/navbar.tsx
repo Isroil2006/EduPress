@@ -40,7 +40,7 @@ export default function Navbar() {
                     to="/"
                     className={({ isActive }) =>
                         `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5]" : "hover:text-[#FF782D]"
+                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
                         }`
                     }
                 >

@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Home from "./pages/home/home";
 import Course from "./pages/course/course";
+import Blog from "./pages/blog/blog";
 import "./index.css";
 
 export default function App() {
@@ -13,8 +14,9 @@ export default function App() {
             <Routes location={location}>
                 <Route path="/" element={Home()} />
                 <Route path="/courses" element={Course()} />
+                <Route path="/blog" element={Blog()} />
             </Routes>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

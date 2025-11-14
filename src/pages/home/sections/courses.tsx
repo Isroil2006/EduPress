@@ -15,8 +15,8 @@ export default function Courses() {
             <div className="flex flex-col mt-[50px] gap-[30px]  ">
                 <div className="flex items-center justify-between ">
                     {/* card  */}
-                    <div className="w-[410px] border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
-                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-1.png')] bg-center bg-no-repeat">
+                    <div className="w-[410px] overflow-hidden border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
+                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-1.png')] bg-cover bg-no-repeat">
                             <span className="px-3 py-2 font-jost font-[500] text-[16px] bg-black rounded-[8px] text-white">
                                 Photography
                             </span>
@@ -82,8 +82,8 @@ export default function Courses() {
                     </div>
 
                     {/* card  */}
-                    <div className="w-[410px] border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
-                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-2.png')] bg-center bg-no-repeat">
+                    <div className="w-[410px] overflow-hidden border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
+                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-2.png')] bg-cover bg-no-repeat">
                             <span className="px-3 py-2 font-jost font-[500] text-[16px] bg-black rounded-[8px] text-white">
                                 Photography
                             </span>
@@ -149,8 +149,8 @@ export default function Courses() {
                     </div>
 
                     {/* card  */}
-                    <div className="w-[410px] border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
-                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-3.png')] bg-center bg-no-repeat">
+                    <div className="w-[410px] overflow-hidden border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
+                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-3.png')] bg-cover bg-no-repeat">
                             <span className="px-3 py-2 font-jost font-[500] text-[16px] bg-black rounded-[8px] text-white">
                                 Photography
                             </span>
@@ -218,8 +218,8 @@ export default function Courses() {
 
                 <div className="flex items-center justify-between ">
                     {/* card  */}
-                    <div className="w-[410px] border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
-                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-4.png')] bg-center bg-no-repeat">
+                    <div className="w-[410px] overflow-hidden border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
+                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-4.png')] bg-cover bg-no-repeat">
                             <span className="px-3 py-2 font-jost font-[500] text-[16px] bg-black rounded-[8px] text-white">
                                 Photography
                             </span>
@@ -285,8 +285,8 @@ export default function Courses() {
                     </div>
 
                     {/* card  */}
-                    <div className="w-[410px] border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
-                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-5.png')] bg-center bg-no-repeat">
+                    <div className="w-[410px] overflow-hidden border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
+                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-5.png')] bg-cover bg-no-repeat">
                             <span className="px-3 py-2 font-jost font-[500] text-[16px] bg-black rounded-[8px] text-white">
                                 Photography
                             </span>
@@ -352,8 +352,8 @@ export default function Courses() {
                     </div>
 
                     {/* card  */}
-                    <div className="w-[410px] border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
-                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-6.png')] bg-center bg-no-repeat">
+                    <div className="w-[410px] overflow-hidden border-[1px] border-[#EAEAEA] rounded-[24px] transition-all duration-300 hover:-translate-y-[16px] cursor-pointer hover:shadow-lg">
+                        <div className="p-[20px] w-[410px] h-[250px] flex items-start bg-[url('/home-images/courses-images/courses-6.png')] bg-cover bg-no-repeat">
                             <span className="px-3 py-2 font-jost font-[500] text-[16px] bg-black rounded-[8px] text-white">
                                 Photography
                             </span>
