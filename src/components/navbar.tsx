@@ -1,6 +1,13 @@
 import { NavLink } from "react-router-dom";
+import {
+    DropdownMenu,
+    DropdownMenuTrigger,
+    DropdownMenuContent,
+    DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 export default function Navbar() {
+    const isActive = location.pathname === "/page/contact" || location.pathname === "/page/faqs";
     return (
         <div className="myContainer h-max flex items-center justify-between">
             <div className="">
@@ -69,16 +76,30 @@ export default function Navbar() {
                     Blog
                 </NavLink>
 
-                <NavLink
-                    to="/page"
-                    className={({ isActive }) =>
-                        `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
-                        }`
-                    }
-                >
-                    Page
-                </NavLink>
+                <DropdownMenu>
+                    <DropdownMenuTrigger
+                        className={`flex items-center gap-3 px-[25px] py-[20px] font-exo font-[600] text-[16px] outline-0 duration-300 ${isActive ? "bg-[#F5F5F5] text-[#FF782D]" : "hover:text-[#FF782D]"}`}
+                    >
+                        Page
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.06 0L4 3.05333L0.94 0L0 0.94L4 4.94L8 0.94L7.06 0Z" fill="currentColor" />
+                        </svg>
+                    </DropdownMenuTrigger>
+
+                    <DropdownMenuContent className="w-40">
+                        <DropdownMenuItem asChild>
+                            <NavLink to="/page/contact" className="w-full text-[15px] font-exo">
+                                Contact
+                            </NavLink>
+                        </DropdownMenuItem>
+
+                        <DropdownMenuItem asChild>
+                            <NavLink to="/page/faqs" className="w-full text-[15px] font-exo">
+                                FAQs
+                            </NavLink>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
 
                 <NavLink
                     to="/learnpress"
