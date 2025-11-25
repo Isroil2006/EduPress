@@ -1,5 +1,5 @@
 import Direct from "./contact/direct";
-import Navigation from "./contact/navigation";
+import Navigation from "./navigation";
 
 export default function Contact() {
     return (

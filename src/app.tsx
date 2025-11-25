@@ -5,6 +5,7 @@ import Home from "./pages/home/home";
 import Course from "./pages/course/course";
 import Blog from "./pages/blog/blog";
 import Contact from "./pages/page/contact";
+import FAQS from "./pages/page/faqs";
 import "./index.css";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
                 <Route path="/blog" element={Blog()} />
                 <Route path="/page">
                     <Route path="contact" element={<Contact />} />
+                    <Route path="faqs" element={<FAQS />} />
                 </Route>
             </Routes>
             <Footer />
