@@ -15,7 +15,6 @@ body {
 }
 
 .myContainer {
-  overflow: hidden;
   width: 1290px;
   margin: 0 auto;
 }
