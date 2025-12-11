@@ -19,6 +19,7 @@ export default function App() {
                 <Route path="/courses" element={Course()} />
                 <Route path="/courses/:id" element={<CourseSingle />} />
                 <Route path="/blog" element={Blog()} />
+                
                 <Route path="/page">
                     <Route path="contact" element={<Contact />} />
                     <Route path="faqs" element={<FAQS />} />

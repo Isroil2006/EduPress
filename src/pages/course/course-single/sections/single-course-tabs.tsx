@@ -67,6 +67,15 @@ export default function SingleCourseTabs() {
                     <div className="flex items-center justify-center rounded-[20px] bg-[#E64C51] py-[58px] px-[47px]">
                         <img src="/courses-images/course-single-images/thim-press.svg" alt="" />
                     </div>
+
+                    <div className="flex flex-col gap-3">
+                        <h3 className="font-exo font-[600] text-[20px]">ThimPress</h3>
+                        <p className="font-jost font-[400] text-[18px] text-[#555555]">LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online.</p>
+                    </div>
+
+                    <div className="flex flex-col gap-3">
+                        
+                    </div>
                 </div>
             </div>
         );
