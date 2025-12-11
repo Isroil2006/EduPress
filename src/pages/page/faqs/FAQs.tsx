@@ -13,13 +13,13 @@ export default function FAQs() {
   return (
     <div>
       <div className="myContainer">
-        <h1 className="text-[36px] font-semibold font-exo">FAQs</h1>
+        <h1 className="text-[36px] mt-[30px] font-semibold font-exo">FAQs</h1>
 
         <div className="flex gap-[100px] mt-[40px]">
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-[20px] mt-[40px]">
             {Array.from({ length: numberOfAccordions }).map((_, index) => {
-              const realId = index; // 0–4
+              const realId = index; 
               const isOpen = openId === realId;
 
               return (
