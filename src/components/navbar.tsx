@@ -11,7 +11,7 @@ export default function Navbar() {
     return (
         <div className="myContainer h-max flex items-center justify-between">
             <div className="">
-                <a href="" className="flex items-center gap-[4px]">
+                <a href="/" className="flex items-center gap-[4px]">
                     <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_1259)">
                             <path

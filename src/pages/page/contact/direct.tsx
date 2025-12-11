@@ -75,8 +75,8 @@ export default function Direct() {
             </div>
           </div>
         </div>
-        <div className="w-[850px] h-[450px] border-2 border-amber-400">
-          <img src="/contact-image/Map.png" alt="" />
+        <div className="w-[850px] h-max">
+          <img src="/contact.image/Map.png" alt="" />
         </div>
       </div>
       <div className=" mt-[80px]">
