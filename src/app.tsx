@@ -12,25 +12,25 @@ import Register from "./pages/register/register";
 import "./index.css";
 
 export default function App() {
-    const location = useLocation();
-    return (
-        <div className="">
-            <Navbar />
-            <Routes location={location}>
-                <Route path="/" element={Home()} />
-                <Route path="/courses" element={Course()} />
-                <Route path="/courses/:id" element={<CourseSingle />} />
-                <Route path="/blog" element={Blog()} />
+  const location = useLocation();
+  return (
+    <div className="">
+      <Navbar />
+      <Routes location={location}>
+        <Route path="/" element={Home()} />
+        <Route path="/courses" element={Course()} />
+        <Route path="/courses/:id" element={<CourseSingle />} />
+        <Route path="/blog" element={Blog()} />
 
-                <Route path="/page">
-                    <Route path="contact" element={<Contact />} />
-                    <Route path="faqs" element={<FAQS />} />
-                </Route>
+        <Route path="/page">
+          <Route path="contact" element={<Contact />} />
+          <Route path="faqs" element={<FAQS />} />
+        </Route>
 
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-            </Routes>
-            <Footer />
-        </div>
-    );
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
 }
