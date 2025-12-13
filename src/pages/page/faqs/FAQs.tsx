@@ -19,17 +19,24 @@ export default function FAQs() {
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-[20px] mt-[40px]">
             {Array.from({ length: numberOfAccordions }).map((_, index) => {
-              const realId = index; 
+              const realId = index;
               const isOpen = openId === realId;
 
               return (
-                <div key={realId} className="bg-gray-50 w-[600px]">
+                <div
+                  key={realId}
+                  className="bg-gray-50 rounded-[8px] w-[600px]"
+                >
                   <button
                     onClick={() => toggleAccordion(realId)}
                     aria-expanded={isOpen}
                     className="w-full flex items-center justify-between p-4 focus:outline-none"
                   >
-                    <h3 className="text-black font-semibold text-lg">
+                    <h3
+                      className={`font-semibold text-lg transition-colors duration-200 ${
+                        isOpen ? "text-[#FF782D]" : "text-black"
+                      }`}
+                    >
                       What Does Royalty Free Mean?
                     </h3>
 
@@ -73,13 +80,20 @@ export default function FAQs() {
               const isOpen = openId === realId;
 
               return (
-                <div key={realId} className="bg-gray-50 w-[600px]">
+                <div
+                  key={realId}
+                  className="bg-gray-50 rounded-[8px] w-[600px]"
+                >
                   <button
                     onClick={() => toggleAccordion(realId)}
                     aria-expanded={isOpen}
                     className="w-full flex items-center h-[60px] justify-between p-4 focus:outline-none"
                   >
-                    <h3 className="text-black font-semibold text-lg">
+                    <h3
+                      className={`font-semibold text-lg ${
+                        isOpen ? "text-[#FF782D]" : "text-black"
+                      }`}
+                    >
                       What Does Royalty Free Mean?
                     </h3>
 
