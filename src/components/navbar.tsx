@@ -1,10 +1,5 @@
 import { NavLink } from "react-router-dom";
-import {
-    DropdownMenu,
-    DropdownMenuTrigger,
-    DropdownMenuContent,
-    DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 
 export default function Navbar() {
     const isActive = location.pathname === "/page/contact" || location.pathname === "/page/faqs";
@@ -43,43 +38,20 @@ export default function Navbar() {
             </div>
 
             <ul className="flex items-center">
-                <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                        `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
-                        }`
-                    }
-                >
+                <NavLink to="/" className={({ isActive }) => `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"}`}>
                     Home
                 </NavLink>
 
-                <NavLink
-                    to="/courses"
-                    className={({ isActive }) =>
-                        `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
-                        }`
-                    }
-                >
+                <NavLink to="/courses" className={({ isActive }) => `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"}`}>
                     Courses
                 </NavLink>
 
-                <NavLink
-                    to="/blog"
-                    className={({ isActive }) =>
-                        `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
-                        }`
-                    }
-                >
+                <NavLink to="/blog" className={({ isActive }) => `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"}`}>
                     Blog
                 </NavLink>
 
                 <DropdownMenu>
-                    <DropdownMenuTrigger
-                        className={`flex items-center gap-3 px-[25px] py-[20px] font-exo font-[600] text-[16px] outline-0 duration-300 ${isActive ? "bg-[#F5F5F5] text-[#FF782D]" : "hover:text-[#FF782D]"}`}
-                    >
+                    <DropdownMenuTrigger className={`flex items-center gap-3 px-[25px] py-[20px] font-exo font-[600] text-[16px] outline-0 duration-300 ${isActive ? "bg-[#F5F5F5] text-[#FF782D]" : "hover:text-[#FF782D]"}`}>
                         Page
                         <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.06 0L4 3.05333L0.94 0L0 0.94L4 4.94L8 0.94L7.06 0Z" fill="currentColor" />
@@ -101,47 +73,26 @@ export default function Navbar() {
                     </DropdownMenuContent>
                 </DropdownMenu>
 
-                <NavLink
-                    to="/learnpress"
-                    className={({ isActive }) =>
-                        `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
-                        }`
-                    }
-                >
+                <NavLink to="/learnpress" className={({ isActive }) => `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"}`}>
                     LearnPress Add-On
                 </NavLink>
 
-                <NavLink
-                    to="/premium-theme"
-                    className={({ isActive }) =>
-                        `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${
-                            isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"
-                        }`
-                    }
-                >
+                <NavLink to="/premium-theme" className={({ isActive }) => `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"}`}>
                     Premium Theme
                 </NavLink>
             </ul>
 
             <div className="flex items-center gap-5">
-                <a href="#" className="font-jost font-[500] text-[18px]">
-                    Login/Register
+                <a href="/login" className="font-jost font-[500] text-[18px]">
+                    Login
+                </a>
+                <a href="/register" className="font-jost font-[500] text-[18px]">
+                    Register
                 </a>
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="1" y="1" width="46" height="46" rx="23" stroke="#FF782D" stroke-width="2" />
-                    <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M23.1666 17.3333C19.945 17.3333 17.3333 19.945 17.3333 23.1667C17.3333 26.3883 19.945 29 23.1666 29C26.3883 29 29 26.3883 29 23.1667C29 19.945 26.3883 17.3333 23.1666 17.3333ZM15.6666 23.1667C15.6666 19.0245 19.0245 15.6667 23.1666 15.6667C27.3088 15.6667 30.6666 19.0245 30.6666 23.1667C30.6666 27.3088 27.3088 30.6667 23.1666 30.6667C19.0245 30.6667 15.6666 27.3088 15.6666 23.1667Z"
-                        fill="#FF782D"
-                    />
-                    <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M27.2858 27.2858C27.6113 26.9603 28.1389 26.9603 28.4643 27.2858L32.0893 30.9108C32.4148 31.2362 32.4148 31.7638 32.0893 32.0893C31.7639 32.4147 31.2363 32.4147 30.9108 32.0893L27.2858 28.4643C26.9604 28.1388 26.9604 27.6112 27.2858 27.2858Z"
-                        fill="#FF782D"
-                    />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.1666 17.3333C19.945 17.3333 17.3333 19.945 17.3333 23.1667C17.3333 26.3883 19.945 29 23.1666 29C26.3883 29 29 26.3883 29 23.1667C29 19.945 26.3883 17.3333 23.1666 17.3333ZM15.6666 23.1667C15.6666 19.0245 19.0245 15.6667 23.1666 15.6667C27.3088 15.6667 30.6666 19.0245 30.6666 23.1667C30.6666 27.3088 27.3088 30.6667 23.1666 30.6667C19.0245 30.6667 15.6666 27.3088 15.6666 23.1667Z" fill="#FF782D" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.2858 27.2858C27.6113 26.9603 28.1389 26.9603 28.4643 27.2858L32.0893 30.9108C32.4148 31.2362 32.4148 31.7638 32.0893 32.0893C31.7639 32.4147 31.2363 32.4147 30.9108 32.0893L27.2858 28.4643C26.9604 28.1388 26.9604 27.6112 27.2858 27.2858Z" fill="#FF782D" />
                 </svg>
             </div>
         </div>

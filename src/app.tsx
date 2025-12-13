@@ -7,6 +7,8 @@ import CourseSingle from "./pages/course/course-single/course-single";
 import Blog from "./pages/blog/blog";
 import Contact from "./pages/page/contact";
 import FAQS from "./pages/page/faqs";
+import Login from "./pages/login/login";
+import Register from "./pages/register/register";
 import "./index.css";
 
 export default function App() {
@@ -19,11 +21,14 @@ export default function App() {
                 <Route path="/courses" element={Course()} />
                 <Route path="/courses/:id" element={<CourseSingle />} />
                 <Route path="/blog" element={Blog()} />
-                
+
                 <Route path="/page">
                     <Route path="contact" element={<Contact />} />
                     <Route path="faqs" element={<FAQS />} />
                 </Route>
+
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
             </Routes>
             <Footer />
         </div>

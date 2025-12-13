@@ -121,6 +121,7 @@ export default function AllCourses() {
                 </div>
             </div>
 
+            {/* right */}
             <div className="flex w-[270px] flex-col gap-[20px]">
                 <div className="flex w-full flex-col gap-[20px] pt-[15px]">
                     <span className="font-exo font-[600] text-[20px] text-[#000]">Course category</span>
