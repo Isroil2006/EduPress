@@ -10,27 +10,36 @@ import FAQS from "./pages/page/faqs";
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
 import "./index.css";
+import { ProtectedRoute } from "./protectedRoute";
 
 export default function App() {
-  const location = useLocation();
-  return (
-    <div className="">
-      <Navbar />
-      <Routes location={location}>
-        <Route path="/" element={Home()} />
-        <Route path="/courses" element={Course()} />
-        <Route path="/courses/:id" element={<CourseSingle />} />
-        <Route path="/blog" element={Blog()} />
+    const location = useLocation();
 
-        <Route path="/page">
-          <Route path="contact" element={<Contact />} />
-          <Route path="faqs" element={<FAQS />} />
-        </Route>
+    const hideLayout = location.pathname === "/login" || location.pathname === "/register";
+    return (
+        <div>
+            {!hideLayout && <Navbar />}
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+            <Routes>
+                {/* PROTECTED ROUTES */}
+                <Route element={<ProtectedRoute />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/courses" element={<Course />} />
+                    <Route path="/courses/:id" element={<CourseSingle />} />
+                    <Route path="/blog" element={<Blog />} />
+
+                    <Route path="/page">
+                        <Route path="contact" element={<Contact />} />
+                        <Route path="faqs" element={<FAQS />} />
+                    </Route>
+                </Route>
+
+                {/* PUBLIC ROUTES */}
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+            </Routes>
+
+            {!hideLayout && <Footer />}
+        </div>
+    );
 }

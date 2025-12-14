@@ -1,8 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { Button } from "./ui/button";
+import { User2Icon } from "lucide-react";
+import { useState } from "react";
 
 export default function Navbar() {
     const isActive = location.pathname === "/page/contact" || location.pathname === "/page/faqs";
+    const navigate = useNavigate();
+    const [userName] = useState(() => {
+        const user = JSON.parse(localStorage.getItem("user") || "{}");
+        return user.userName || "User";
+    });
+    const onLogout = () => {
+        localStorage.removeItem("isLoggedIn");
+        navigate("/login");
+    };
+
     return (
         <div className="myContainer h-max flex items-center justify-between">
             <div className="">
@@ -73,22 +86,29 @@ export default function Navbar() {
                     </DropdownMenuContent>
                 </DropdownMenu>
 
-                <NavLink to="/learnpress" className={({ isActive }) => `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"}`}>
+                {/* <NavLink to="/learnpress" className={({ isActive }) => `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"}`}>
                     LearnPress Add-On
                 </NavLink>
 
                 <NavLink to="/premium-theme" className={({ isActive }) => `px-[25px] py-[20px] font-exo font-[600] text-[16px] duration-300 ${isActive ? "bg-[#F5F5F5] !text-[#FF782D]" : "hover:text-[#FF782D]"}`}>
                     Premium Theme
-                </NavLink>
+                </NavLink> */}
             </ul>
 
-            <div className="flex items-center gap-5">
-                <a href="/login" className="font-jost font-[500] text-[18px]">
-                    Login
-                </a>
-                <a href="/register" className="font-jost font-[500] text-[18px]">
-                    Register
-                </a>
+            <div className="flex items-center gap-2">
+                <DropdownMenu>
+                    <DropdownMenuTrigger className="w-[48px] h-[48px] rounded-[50%] border-[2px] border-[#FF782D]" asChild>
+                        <Button variant="outline" size="sm">
+                            <User2Icon className="size-5 text-[#FF782D]" />
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="h-max w-max flex-col items-center justify-center">
+                        <p className="ml-[5px] text-[15px] font-bold">{userName}</p>
+                        <DropdownMenuItem className="text-red-700" onClick={onLogout}>
+                            Logout
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="1" y="1" width="46" height="46" rx="23" stroke="#FF782D" stroke-width="2" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M23.1666 17.3333C19.945 17.3333 17.3333 19.945 17.3333 23.1667C17.3333 26.3883 19.945 29 23.1666 29C26.3883 29 29 26.3883 29 23.1667C29 19.945 26.3883 17.3333 23.1666 17.3333ZM15.6666 23.1667C15.6666 19.0245 19.0245 15.6667 23.1666 15.6667C27.3088 15.6667 30.6666 19.0245 30.6666 23.1667C30.6666 27.3088 27.3088 30.6667 23.1666 30.6667C19.0245 30.6667 15.6666 27.3088 15.6666 23.1667Z" fill="#FF782D" />
