@@ -139,7 +139,41 @@ export default function SingleCourseTabs() {
     }
 
     function FaqsTab() {
-        return <div></div>;
+        return (
+            <Accordion type="single" collapsible className="w-full flex flex-col gap-5">
+                <AccordionItem className=" bg-white px-[30px] rounded-[8px]" value="item-1">
+                    <AccordionTrigger className="flex items-center justify-between hover:no-underline cursor-pointer [&[data-state=open]>p]:text-[#FF782D]">
+                        <p className="font-exo font-[600] text-[16px] duration-300">What Does Royalty Free Mean?</p>
+                        <ChevronDown className="h-4 w-4 shrink-0 text-black transition-transform duration-300" />
+                    </AccordionTrigger>
+                    <AccordionContent className="font-jost font-[400] text-[18px] text-[#555555]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem className=" bg-white px-[30px] rounded-[8px]" value="item-2">
+                    <AccordionTrigger className="flex items-center justify-between hover:no-underline cursor-pointer [&[data-state=open]>p]:text-[#FF782D]">
+                        <p className="font-exo font-[600] text-[16px] duration-300">What Does Royalty Free Mean?</p>
+                        <ChevronDown className="h-4 w-4 shrink-0 text-black transition-transform duration-300" />
+                    </AccordionTrigger>
+                    <AccordionContent className="font-jost font-[400] text-[18px] text-[#555555]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem className=" bg-white px-[30px] rounded-[8px]" value="item-3">
+                    <AccordionTrigger className="flex items-center justify-between hover:no-underline cursor-pointer [&[data-state=open]>p]:text-[#FF782D]">
+                        <p className="font-exo font-[600] text-[16px] duration-300">What Does Royalty Free Mean?</p>
+                        <ChevronDown className="h-4 w-4 shrink-0 text-black transition-transform duration-300" />
+                    </AccordionTrigger>
+                    <AccordionContent className="font-jost font-[400] text-[18px] text-[#555555]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem className=" bg-white px-[30px] rounded-[8px]" value="item-4">
+                    <AccordionTrigger className="flex items-center justify-between hover:no-underline cursor-pointer [&[data-state=open]>p]:text-[#FF782D]">
+                        <p className="font-exo font-[600] text-[16px] duration-300">What Does Royalty Free Mean?</p>
+                        <ChevronDown className="h-4 w-4 shrink-0 text-black transition-transform duration-300" />
+                    </AccordionTrigger>
+                    <AccordionContent className="font-jost font-[400] text-[18px] text-[#555555]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</AccordionContent>
+                </AccordionItem>
+            </Accordion>
+        );
     }
 
     return (
