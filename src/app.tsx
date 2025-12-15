@@ -5,6 +5,7 @@ import Home from "./pages/home/home";
 import Course from "./pages/course/course";
 import CourseSingle from "./pages/course/course-single/course-single";
 import Blog from "./pages/blog/blog";
+import BlogSingle from "./pages/blog/blog-single/blog-single";
 import Contact from "./pages/page/contact";
 import FAQS from "./pages/page/faqs";
 import Login from "./pages/login/login";
@@ -27,6 +28,7 @@ export default function App() {
                     <Route path="/courses" element={<Course />} />
                     <Route path="/courses/:id" element={<CourseSingle />} />
                     <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:id" element={<BlogSingle />} />
 
                     <Route path="/page">
                         <Route path="contact" element={<Contact />} />
