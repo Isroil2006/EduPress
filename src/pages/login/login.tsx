@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -75,9 +75,9 @@ export default function Login() {
 
                         <p className="text-center text-sm">
                             Akkountingiz yo'qmi?{" "}
-                            <a href="/register" className="text-blue-600 hover:underline">
+                            <Link to="/register" className="text-blue-600 hover:underline">
                                 Register
-                            </a>
+                            </Link>
                         </p>
                     </form>
                 </CardContent>

@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const registerSchema = z
     .object({
@@ -105,9 +105,9 @@ export default function Register() {
 
                         <p className="text-center text-sm">
                             Akkountingiz bormi?{" "}
-                            <a href="/login" className="text-blue-600 hover:underline">
+                            <Link to="/login" className="text-blue-600 hover:underline">
                                 Login
-                            </a>
+                            </Link>
                         </p>
                     </form>
                 </CardContent>
