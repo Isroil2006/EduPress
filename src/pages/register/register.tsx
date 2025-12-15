@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const registerSchema = z
     .object({
@@ -26,6 +27,8 @@ const registerSchema = z
 type RegisterForm = z.infer<typeof registerSchema>;
 
 export default function Register() {
+    const navigate = useNavigate();
+
     const {
         register,
         handleSubmit,
@@ -37,7 +40,7 @@ export default function Register() {
 
     const onSubmit = (data: RegisterForm) => {
         localStorage.setItem("user", JSON.stringify(data));
-        window.location.href = "/login";
+        navigate("/login", { replace: true });
     };
 
     const [showPassword, setShowPassword] = useState(false);
