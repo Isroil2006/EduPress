@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 type CardProps = {
     img: string;
@@ -41,9 +41,9 @@ export default function Latest() {
                     <p className="font-jost font-[400] text-[18px] text-[#555555]">Explore our Popular Courses</p>
                 </div>
 
-                <a href="/blog" className="bg-white text-black border-[1px] border-[#9D9D9D] px-[20px] py-[10px] rounded-[24px] cursor-pointer hover:bg-indigo-100 duration-300 active:scale-[0.95]">
+                <Link to="/blog" className="bg-white text-black border-[1px] border-[#9D9D9D] px-[20px] py-[10px] rounded-[24px] cursor-pointer hover:bg-indigo-100 duration-300 active:scale-[0.95]">
                     All categories
-                </a>
+                </Link>
             </div>
 
             <div className="flex flex-col mt-[50px] gap-[30px]  ">
